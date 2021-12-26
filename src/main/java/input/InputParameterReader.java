@@ -1,17 +1,14 @@
 package input;
 
-import com.sun.tools.javac.Main;
-
-import java.io.IOException;
 import java.util.Properties;
 
-public class InputReader {
+public class InputParameterReader {
     private static Properties properties = new Properties();
 
     public static void loadProperties() {
         try {
             //load a properties file from class path, inside static method
-            properties.load(InputReader.class.getClassLoader().getResourceAsStream("input.properties"));
+            properties.load(InputParameterReader.class.getClassLoader().getResourceAsStream("input.properties"));
         }
         catch (Exception e) {
             throw new RuntimeException(e);
